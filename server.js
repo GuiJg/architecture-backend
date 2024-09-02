@@ -24,7 +24,7 @@ app.use(authMiddleware);
 app.use('/api/project', projectRoute);
 
 //usuarios rota
-app.use('/api/user', userRoute);
+app.use('/api/user', userRoute);  
 
 mongoose.connect(MONGO_URL)
     .then(() => {
