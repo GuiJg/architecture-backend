@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const projectRoute = require('./routes/projectRoute');
 const userRoute = require('./routes/userRoute');
 const errorMiddleware = require('./middleware/errorMiddleware');
-const authMiddleware = require('./middleware/authMiddleware');
+// const authMiddleware = require('./middleware/authMiddleware');
 
 const app = express();
 
@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(errorMiddleware);
-app.use(authMiddleware);
+// app.use(authMiddleware);
 
 //projetos rota
 app.use('/api/project', projectRoute);
